@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html = style="height: 100%;">
+  <head>
+    <title>Empire! 9: The Shattered World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" id="leaflet_js-js"></script>
+	<link rel="stylesheet" id="leaflet_stylesheet-css" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" media="">	
+	<link rel="stylesheet" id="leaflet_stylesheet-css" href="https://unpkg.com/browse/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" media="">
+	<link rel="stylesheet" id="leaflet_stylesheet-css" href="https://unpkg.com/browse/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" media="">
+	<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster-src.js"></script>	
+	
+	<!-- Leaflet.FeatureGroup.SubGroup assets. See https://github.com/ghybs/Leaflet.FeatureGroup.SubGroup -->
+	<script src="https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js"></script>
+
+	<!-- Leaflet fullscreen plugin.  See https://github.com/Leaflet/Leaflet.fullscreen -->
+	<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+	<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+	<!-- MEASURE: modified to allow measurements. -->
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/gh/gokertanrisever/leaflet-ruler@master/src/leaflet-ruler.css"
+		integrity="sha384-P9DABSdtEY/XDbEInD3q+PlL+BjqPCXGcF8EkhtKSfSTr/dS5PBKa9+/PMkW2xsY"
+		crossorigin="anonymous"
+	/>
+	<!-- END MEASURE -->	
+	<script src='./tiledFantasyMap.js'></script>
+	
+	<style>
+		path.leaflet-interactive:hover {
+			stroke-opacity: 1;
+			stroke-width: 1;
+			fill-opacity: .2;
+		}
+		
+		.cluster {
+			width: 32px;
+			height: 32px;
+			line-height: 32px;
+			background-image: url('https://pathfinder-gm-tools.s3.amazonaws.com/map/MerisylMapClusterMarker.png');
+			text-align: center;
+			font-weight: bold;
+			color: white;
+		}		
+	</style>
+  </head>
+  
+  <body style="height: 100%;margin: 0;">
+    <div id="map" style="width: 100%; height: 100%; background: #000000;"></div>
+    <script type="text/javascript">
+		var mapDim = new MapDimensions();
+			
+		/* Portions adapted from: https://github.com/bozdoz/wp-plugin-leaflet-map/ */
+		
+		
+		/* BASIC CUSTOMIZATIONS */
+		mapDim.referencesize = 4096; // 20480;
+		mapDim.metersPerPixel = 154.78;
+		mapDim.minzoom = 5;
+    mapDim.maxzoom = 8;
+		
+		var mapLocation = "https://shatteredworldgeneral.s3.us-east-2.amazonaws.com/BigTileMap/{z}/{x}/{y}.png" //"https://pathfinder-gm-tools.s3.amazonaws.com/map/worldtiles/{z}/{x}/{y}.png"; // "https://new.merisyl.com/wp-content/uploads/2023/11/tiles/{z}/{x}/{y}.jpeg";
+		var locationsList = [
+			/*"https://pathfinder-gm-tools.s3.amazonaws.com/map/Aodar.geojson",			
+			"https://pathfinder-gm-tools.s3.amazonaws.com/map/Aunea.geojson",
+			"https://pathfinder-gm-tools.s3.amazonaws.com/map/Aurix.geojson",
+			"https://pathfinder-gm-tools.s3.amazonaws.com/map/Buyre.geojson",
+			"https://pathfinder-gm-tools.s3.amazonaws.com/map/Chayle.geojson",
+			"https://pathfinder-gm-tools.s3.amazonaws.com/map/Frostfeld.geojson",
+			"https://pathfinder-gm-tools.s3.amazonaws.com/map/Verchix.geojson"*/
+		];
+		
+		var useCustomMarkerIcon = true;
+		
+		// The keys in the map below should map to the "marker-group" property of the GeoJSON file in which locations are defined.
+		var customMarkers = {
+			"Default" : "https://pathfinder-gm-tools.s3.amazonaws.com/map/castleMarker.png"
+		}	
+
+		/* MEASURE: Modified to allow measurements. */
+		var map = fantasyMap(mapLocation, mapDim, locationsList, useCustomMarkerIcon, customMarkers).then(function(map) {
+			L.control.ruler().addTo(map);
+			// map.setView([9000, -3000], 2); // Set the starting location and zoom level.	
+			map._superZoom.set(L.latLng(18100, -1340), "https://merisyl.com/gazette/chayle/aodar/aodar-free-city-map/?lng=1&lat=1&zoom=2"); // Set up a "Super Zoom" that lets you zoom into another map at a given point.
+			map._superZoom.set(L.latLng(415, -2431), "https://new.merisyl.com/gazette/chayle/notch/notch-map/?lat=1&lng=1&zoom=2"); // Set up a "Super Zoom" that lets you zoom into another map at a given point.
+			
+			locationFinder(map);  // Enable positional marker.
+		});
+		/* END MEASURE */
+	
+    </script>
+  </body>
+</html>
