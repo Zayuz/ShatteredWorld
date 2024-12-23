@@ -1,0 +1,10 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [0.00001, 0.0001]
+  },
+  "properties": {
+    "popup-text":"<a href='https://shatteredworld.org/Misty-Wood'>Region 1: Misty Wood</a>"
+  }
+}
