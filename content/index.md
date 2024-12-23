@@ -1,7 +1,6 @@
 ---
 title: Interactive Map
 ---
-
 ```leaflet
 id:emjata-regional-map
 image: [[Emjata.png]]
