@@ -1,4 +1,5 @@
 ---
 title: Interactive Map
 ---
-[[map|Click to go to the interactive map, then refresh the page!]]
+[Click here to go to the interactive Map!](https://shatteredworld.org/map)
+
