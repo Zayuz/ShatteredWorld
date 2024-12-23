@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Empire 9: The Shattered World</title>
+      <link>https://https://shatteredworld.org/</link>
+      <description>Last 10 notes on Empire 9: The Shattered World</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Misty Wood</title>
+    <link>https://https:/shatteredworld.org/Misty-Wood</link>
+    <guid>https://https:/shatteredworld.org/Misty-Wood</guid>
+    <description>​ The Dryads of the Misty Wood Region 22 They dance under the shade of trees and beckon with words of honey. As soon as you step into their canopy, you can never escape the mist.</description>
+    <pubDate>Mon, 23 Dec 2024 01:31:50 GMT</pubDate>
+  </item><item>
+    <title>Interactive Map</title>
+    <link>https://https:/shatteredworld.org/</link>
+    <guid>https://https:/shatteredworld.org/</guid>
+    <description>id:emjata-regional-map image: [[Emjata.png]] height: 768px unit: km lat: 50 long: 50 scale: 1 minZoom: 8 maxZoom: 12 defaultZoom: 10.5 zoomDelta: 0.5.</description>
+    <pubDate>Mon, 23 Dec 2024 01:31:50 GMT</pubDate>
+  </item><item>
+    <title>How to map</title>
+    <link>https://https:/shatteredworld.org/How-to-map</link>
+    <guid>https://https:/shatteredworld.org/How-to-map</guid>
+    <description>id: MapCalcExample ### Must be unique with no spaces image: [[Emjata.png]] ### Link to the map image file bounds: [[0,0], [1642, 2048]] ### Size of the map in px Width_x, Height_y height: ...</description>
+    <pubDate>Mon, 23 Dec 2024 01:31:50 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
