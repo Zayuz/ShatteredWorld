@@ -56,7 +56,7 @@
 		mapDim.referencesize = 4096; // 20480;
 		mapDim.metersPerPixel = 154.78;
 		mapDim.minzoom = 5;
-    mapDim.maxzoom = 8;
+        mapDim.maxzoom = 8;
 		
 		var mapLocation = "https://shatteredworldgeneral.s3.us-east-2.amazonaws.com/BigTileMap/{z}/{x}/{y}.png" //"https://pathfinder-gm-tools.s3.amazonaws.com/map/worldtiles/{z}/{x}/{y}.png"; // "https://new.merisyl.com/wp-content/uploads/2023/11/tiles/{z}/{x}/{y}.jpeg";
 		var locationsList = [
@@ -66,14 +66,16 @@
 			"https://pathfinder-gm-tools.s3.amazonaws.com/map/Buyre.geojson",
 			"https://pathfinder-gm-tools.s3.amazonaws.com/map/Chayle.geojson",
 			"https://pathfinder-gm-tools.s3.amazonaws.com/map/Frostfeld.geojson",
-			"https://pathfinder-gm-tools.s3.amazonaws.com/map/Verchix.geojson"*/
+			"https://pathfinder-gm-tools.s3.amazonaws.com/map/Verchix.geojson",*/
+            //"https://shatteredworldgeneral.s3.us-east-2.amazonaws.com/BigTileMap/geojson/Region+1.geojson",
+            "./Region1.geojson"
 		];
 		
-		var useCustomMarkerIcon = true;
+		var useCustomMarkerIcon = false;
 		
 		// The keys in the map below should map to the "marker-group" property of the GeoJSON file in which locations are defined.
 		var customMarkers = {
-			//"Default" : "https://pathfinder-gm-tools.s3.amazonaws.com/map/castleMarker.png"
+			"Default" : "https://pathfinder-gm-tools.s3.amazonaws.com/map/castleMarker.png"
 		}	
 
 		/* MEASURE: Modified to allow measurements. */
