@@ -2,6 +2,9 @@
 
 # The Dryads of the Misty Wood
 
+This page is an example, and is also unformatted. Thank you Belle for your fantastic writeup as my (Zayuz's) example!
+
+
 Region 22
 
 _They dance under the shade of trees and beckon with words of honey. As soon as you step into their canopy, you can never escape the mist._

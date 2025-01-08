@@ -1,4 +1,4 @@
-{
+[{
   "type": "Feature",
   "geometry": {
     "type": "Point",
@@ -7,4 +7,14 @@
   "properties": {
     "popup-text":"<a href='https://shatteredworld.org/Misty-Wood'>Region 1: Misty Wood</a>"
   }
-}
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [0.00001, 100.0]
+  },
+  "properties": {
+    "popup-text":"<a href='https://shatteredworld.org/Region-802'>Region 802: Unnamed</a>"
+  }
+}]
