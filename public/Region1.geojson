@@ -2,19 +2,49 @@
   "type": "Feature",
   "geometry": {
     "type": "Point",
-    "coordinates": [0.00001, 0.0001]
+    "coordinates": [0, 0]
   },
   "properties": {
-    "popup-text":"<a href='https://shatteredworld.org/Misty-Wood'>Region 1: Misty Wood</a>"
+    "popup-text":"<a href='https://shatteredworld.org/'>Anchor Point 0-0 for region pin assignnent reference</a>"
   }
 },
 {
   "type": "Feature",
   "geometry": {
     "type": "Point",
-    "coordinates": [-100.0, 200.0]
+    "coordinates": [-150.0, 200.0]
   },
   "properties": {
     "popup-text":"<a href='https://shatteredworld.org/Sanmah/Region-802'>Region 802: Unnamed</a>"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [300, -150]
+  },
+  "properties": {
+    "popup-text":"<a href='https://shatteredworld.org/Llyxmal/Region-204'>Region 204: Unnamed</a>"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-600, -200]
+  },
+  "properties": {
+    "popup-text":"<a href='https://shatteredworld.org/Derlanth/Region-404'>Region 404: Unnamed</a>"
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-1000, -100]
+  },
+  "properties": {
+    "popup-text":"<a href='https://shatteredworld.org/Kaneros/Region-610'>Region 610: Unnamed</a>"
   }
 }]

@@ -42,7 +42,7 @@
   "type": "Feature",
   "geometry": {
     "type": "Point",
-    "coordinates": [-800, -100]
+    "coordinates": [-1000, -100]
   },
   "properties": {
     "popup-text":"<a href='https://shatteredworld.org/Kaneros/Region-610'>Region 610: Unnamed</a>"
