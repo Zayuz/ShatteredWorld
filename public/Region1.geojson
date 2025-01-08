@@ -12,9 +12,9 @@
   "type": "Feature",
   "geometry": {
     "type": "Point",
-    "coordinates": [0.00001, 100.0]
+    "coordinates": [-100.0, 200.0]
   },
   "properties": {
-    "popup-text":"<a href='https://shatteredworld.org/Region-802'>Region 802: Unnamed</a>"
+    "popup-text":"<a href='https://shatteredworld.org/Sanmah/Region-802'>Region 802: Unnamed</a>"
   }
 }]
