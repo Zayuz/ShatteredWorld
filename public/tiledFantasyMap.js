@@ -76,10 +76,10 @@ async function fantasyMap(mapLocation, mapDim, locationsList, useCustomMarkerIco
     }).addTo(map);
     initAjaxGeoJSON(layerDisplayGroups);
 
-    for (var geoData in locationsList) {
+    /*for (var geoData in locationsList) {
         console.log("Loading: " + locationsList[geoData]);
         loadGeoJSON(locationsList[geoData], map); ;
-    }
+    }*/
 
     console.log("Locations list read.");
 	
@@ -294,7 +294,7 @@ async function loadGeoJSON(targetfile, map) {
             "fillOpacity": "40.0"
         };
         var layer = L.ajaxGeoJson(targetfile, {
-            //style: layerStyle,
+            style: layerStyle,
             onEachFeature: onEachFeature,
             pointToLayer: pointToLayer
         });
