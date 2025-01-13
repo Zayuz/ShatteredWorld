@@ -166,13 +166,13 @@ function setInitialLocation(map) {
 }
 
 function layerStyle(feature) {
-    /*var color;
+    var color;
     switch (feature.properties.owner) {
         case 'sample': color = "#ff0000";
         case 'unclaimed': color = "#0000ff";
-    };*/
+    };
     var default_style = {
-        "color": "#00FF00",
+        "color": color,
         "weight": ".3",
         "opacity": "0.30",
         "fillColor": "#00FF00",
