@@ -170,7 +170,12 @@ function layerStyle(feature) {
         "color": "#eaeaea",
         "weight": ".3",
         "opacity": "0.0",
-        "fillColor": "#eaeaea",
+        "fillColor": function(feature) {
+            switch (feature.properties.owner) {
+                case 'sample': return {"color": "#ff0000", "opacity": "50"};
+                case 'unclaimed':   return {"color": "#0000ff", "opacity": "50"};
+                }
+            },
         "fillOpacity": "0.0"
     };
     var rewrite_keys = {
@@ -239,14 +244,7 @@ function pointToLayer(feature, latlng) {
 async function loadGeoJSON(targetfile, map) {
     return new Promise(resolve => {
         var layer = L.ajaxGeoJson(targetfile, {
-            //style: layerStyle,
-            style: 
-            function(feature) {
-                switch (feature.properties.owner) {
-                    case 'sample': return {"color": "#ff0000", "opacity": "50"};
-                    case 'unclaimed':   return {"color": "#0000ff", "opacity": "50"};
-                    }
-                },
+            style: layerStyle,
             onEachFeature: onEachFeature,
             pointToLayer: pointToLayer
         });
