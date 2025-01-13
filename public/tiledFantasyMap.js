@@ -178,16 +178,16 @@ function layerStyle(feature) {
         "fillColor": "#eaeaea",
         "fillOpacity": "40.0"
     };
-    var rewrite_keys = {
+    /*var rewrite_keys = {
         'stroke': 'color',
         'stroke-width': 'weight',
         'stroke-opacity': 'opacity',
         'fill': 'fillColor',
         'fill-opacity': 'fillOpacity',
     };
-    var props = feature.properties || {};
-    var style = {};
-    function camelFun(_, first_letter) {
+    var props = feature.properties || {};*/
+    var style = default_style;
+    /*function camelFun(_, first_letter) {
         return first_letter.toUpperCase();
     };
     for (var key in props) {
@@ -199,7 +199,7 @@ function layerStyle(feature) {
         if (rewrite_keys[key]) {
             style[rewrite_keys[key]] = props[key];
         }
-    }
+    }*/
     return L.Util.extend(style, default_style);
 }
 			
