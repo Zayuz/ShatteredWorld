@@ -76,10 +76,10 @@ async function fantasyMap(mapLocation, mapDim, locationsList, useCustomMarkerIco
     }).addTo(map);
     initAjaxGeoJSON(layerDisplayGroups);
 
-    /*for (var geoData in locationsList) {
+    for (var geoData in locationsList) {
         console.log("Loading: " + locationsList[geoData]);
         loadGeoJSON(locationsList[geoData], map); ;
-    }*/
+    }
 
     console.log("Locations list read.");
 	
@@ -165,50 +165,12 @@ function setInitialLocation(map) {
     }
 }
 
-/*function layerStyle(feature) {
-    var color;
-    switch (feature.properties.owner) {
-        case 'sample': color = "#ff0000";
-        case 'unclaimed': color = "#0000ff";  
-    };
-    var default_style = {
-        "color": color,
-        "weight": ".3",
-        "opacity": "40.0",
-        "fillColor": "#eaeaea",
-        "fillOpacity": "40.0"
-    };
-    /*var rewrite_keys = {
-        'stroke': 'color',
-        'stroke-width': 'weight',
-        'stroke-opacity': 'opacity',
-        'fill': 'fillColor',
-        'fill-opacity': 'fillOpacity',
-    };
-    var props = feature.properties || {};*/
-    var style = default_style;
-    /*function camelFun(_, first_letter) {
-        return first_letter.toUpperCase();
-    };
-    for (var key in props) {
-        if (key.match('-')) {
-            var camelcase = key.replace(/-(\w)/, camelFun);
-            style[camelcase] = props[key];
-        }
-        // rewrite style keys from geojson.io
-        if (rewrite_keys[key]) {
-            style[rewrite_keys[key]] = props[key];
-        }
-    }
-    return L.Util.extend(style, default_style);
-}*/
-
 function layerStyle(feature) {
-    var color;
+    /*var color;
     switch (feature.properties.owner) {
         case 'sample': color = "#ff0000";
         case 'unclaimed': color = "#0000ff";  
-    };
+    };*/
     var default_style = {
         "color": "#00FF00",
         "weight": ".3",
