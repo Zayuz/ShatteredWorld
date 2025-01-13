@@ -294,7 +294,7 @@ async function loadGeoJSON(targetfile, map) {
             "fillOpacity": "40.0"
         };
         var layer = L.ajaxGeoJson(targetfile, {
-            style: layerStyle,
+            //style: layerStyle,
             onEachFeature: onEachFeature,
             pointToLayer: pointToLayer
         });
