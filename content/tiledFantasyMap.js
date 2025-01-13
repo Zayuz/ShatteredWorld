@@ -243,8 +243,8 @@ async function loadGeoJSON(targetfile, map) {
             style: 
             function(feature) {
                 switch (feature.properties.owner) {
-                    case 'sample': return {color: "#ff0000"};
-                    case 'unclaimed':   return {color: "#0000ff"};
+                    case 'sample': return {"color": "#ff0000", "opacity": "50"};
+                    case 'unclaimed':   return {"color": "#0000ff", "opacity": "50"};
                     }
                 },
             onEachFeature: onEachFeature,
