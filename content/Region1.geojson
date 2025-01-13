@@ -42,16 +42,17 @@
   "type":"Feature",
   "properties": {
     "popup-text": "<a href='https://shatteredworld.org/Kaneros/Region-610'>Region 610: Unnamed</a>",
-    "geometry": {
-      "type": "Polygon",
-      "coordinates": [[
-        [-1000,-100],
-        [-1100,-100],
-        [-1100, -90],
-        [-990, -90],
-        [-1000, -100]
-      ]]
-    }
+    "owner": "unclaimed"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [[
+      [-1000,-100],
+      [-1100,-100],
+      [-1100, -90],
+      [-900, -90],
+      [-1000, -100]
+    ]]
   }
 },
 {
