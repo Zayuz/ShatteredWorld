@@ -170,12 +170,7 @@ function layerStyle(feature) {
         "color": "#eaeaea",
         "weight": ".3",
         "opacity": "0.0",
-        "fillColor": function(feature) {
-            switch (feature.properties.owner) {
-                case 'sample': return {"color": "#ff0000", "opacity": "50"};
-                case 'unclaimed':   return {"color": "#0000ff", "opacity": "50"};
-                }
-            },
+        "fillColor": "#eaeaea",
         "fillOpacity": "0.0"
     };
     var rewrite_keys = {
@@ -249,17 +244,17 @@ async function loadGeoJSON(targetfile, map) {
             pointToLayer: pointToLayer
         });
 
-        console.log("Adding layer to map.");
-        layer.addTo(map);
-
-        /*L.geoJSON(locationsList, {
-            style: function(feature) {
-            switch (feature.properties.owner) {
+        L.geoJSON(layer, {
+            style: function(targetfile) {
+            switch (targetfile.properties.owner) {
                 case 'sample': return {color: "#ff0000"};
                 case 'unclaimed':   return {color: "#0000ff"};
                 }
             }
-        }).addTo(map);*/
+        }).addTo(map);
+
+        console.log("Adding layer to map.");
+        //layer.addTo(map);
     });
 }
 
