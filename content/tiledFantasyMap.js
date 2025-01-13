@@ -169,7 +169,7 @@ function layerStyle(feature) {
     /*var color;
     switch (feature.properties.owner) {
         case 'sample': color = "#ff0000";
-        case 'unclaimed': color = "#0000ff";  
+        case 'unclaimed': color = "#0000ff";
     };*/
     var default_style = {
         "color": "#00FF00",
@@ -200,7 +200,7 @@ function layerStyle(feature) {
             style[rewrite_keys[key]] = props[key];
         }
     }
-    return L.Util.extend(style, default_style);
+    return default_style;
 }
 			
 
@@ -243,7 +243,7 @@ function pointToLayer(feature, latlng) {
 
 async function loadGeoJSON(targetfile, map) {
     return new Promise(resolve => {
-        var color;
+        /*var color;
         switch (feature.properties.owner) {
             case 'sample': color = "#ff0000";
             case 'unclaimed': color = "#0000ff";  
@@ -254,7 +254,7 @@ async function loadGeoJSON(targetfile, map) {
             "opacity": "40.0",
             "fillColor": "#00FF00",
             "fillOpacity": "40.0"
-        };
+        };*/
         var layer = L.ajaxGeoJson(targetfile, {
             style: layerStyle,
             onEachFeature: onEachFeature,
