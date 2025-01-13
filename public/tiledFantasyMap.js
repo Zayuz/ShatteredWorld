@@ -174,9 +174,9 @@ function layerStyle(feature) {
     var default_style = {
         "color": "#00FF00",
         "weight": ".3",
-        "opacity": "30.0",
-        "fillColor": "#eaeaea",
-        "fillOpacity": "0.0"
+        "opacity": "0.30",
+        "fillColor": "#00FF00",
+        "fillOpacity": "0.30"
     };
     var rewrite_keys = {
         'stroke': 'color',
