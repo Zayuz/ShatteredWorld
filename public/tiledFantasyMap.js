@@ -165,7 +165,7 @@ function setInitialLocation(map) {
     }
 }
 
-function layerStyle(feature) {
+/*function layerStyle(feature) {
     var color;
     switch (feature.properties.owner) {
         case 'sample': color = "#ff0000";
@@ -199,7 +199,45 @@ function layerStyle(feature) {
         if (rewrite_keys[key]) {
             style[rewrite_keys[key]] = props[key];
         }
-    }*/
+    }
+    return L.Util.extend(style, default_style);
+}*/
+
+function layerStyle(feature) {
+    var color;
+    switch (feature.properties.owner) {
+        case 'sample': color = "#ff0000";
+        case 'unclaimed': color = "#0000ff";  
+    };
+    var default_style = {
+        "color": "#00FF00",
+        "weight": ".3",
+        "opacity": "30.0",
+        "fillColor": "#eaeaea",
+        "fillOpacity": "0.0"
+    };
+    var rewrite_keys = {
+        'stroke': 'color',
+        'stroke-width': 'weight',
+        'stroke-opacity': 'opacity',
+        'fill': 'fillColor',
+        'fill-opacity': 'fillOpacity',
+    };
+    var props = feature.properties || {};
+    var style = {};
+    function camelFun(_, first_letter) {
+        return first_letter.toUpperCase();
+    };
+    for (var key in props) {
+        if (key.match('-')) {
+            var camelcase = key.replace(/-(\w)/, camelFun);
+            style[camelcase] = props[key];
+        }
+        // rewrite style keys from geojson.io
+        if (rewrite_keys[key]) {
+            style[rewrite_keys[key]] = props[key];
+        }
+    }
     return L.Util.extend(style, default_style);
 }
 			
@@ -256,7 +294,7 @@ async function loadGeoJSON(targetfile, map) {
             "fillOpacity": "40.0"
         };
         var layer = L.ajaxGeoJson(targetfile, {
-            style: default_style,
+            style: layerStyle,
             onEachFeature: onEachFeature,
             pointToLayer: pointToLayer
         });
