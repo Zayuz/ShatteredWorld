@@ -243,8 +243,20 @@ function pointToLayer(feature, latlng) {
 
 async function loadGeoJSON(targetfile, map) {
     return new Promise(resolve => {
+        var color;
+        switch (feature.properties.owner) {
+            case 'sample': color = "#ff0000";
+            case 'unclaimed': color = "#0000ff";  
+        };
+        var default_style = {
+            "color": color,
+            "weight": ".3",
+            "opacity": "40.0",
+            "fillColor": "#eaeaea",
+            "fillOpacity": "40.0"
+        };
         var layer = L.ajaxGeoJson(targetfile, {
-            style: layerStyle,
+            style: default_style,
             onEachFeature: onEachFeature,
             pointToLayer: pointToLayer
         });
