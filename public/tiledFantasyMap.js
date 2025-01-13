@@ -252,7 +252,7 @@ async function loadGeoJSON(targetfile, map) {
             "color": color,
             "weight": ".3",
             "opacity": "40.0",
-            "fillColor": "#eaeaea",
+            "fillColor": "#00FF00",
             "fillOpacity": "40.0"
         };
         var layer = L.ajaxGeoJson(targetfile, {
