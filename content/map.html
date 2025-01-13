@@ -67,15 +67,6 @@
             //"https://shatteredworldgeneral.s3.us-east-2.amazonaws.com/BetaTileMap/geojson/Region+1.geojson",
             "./Region1.geojson"
 		];
-
-		L.geoJSON(states, {
-    		style: function(feature) {
-        	switch (feature.properties.owner) {
-            	case 'sample': return {color: "#ff0000"};
-            	case 'unclaimed':   return {color: "#0000ff"};
-        	}
-    		}
-		}).addTo(map);
 		
 		var useCustomMarkerIcon = false;
 		
@@ -93,6 +84,15 @@
 			
 			locationFinder(map);  // Enable positional marker.
 		});
+		
+		L.geoJSON(states, {
+    		style: function(feature) {
+        	switch (feature.properties.owner) {
+            	case 'sample': return {color: "#ff0000"};
+            	case 'unclaimed':   return {color: "#0000ff"};
+        	}
+    		}
+		}).addTo(map);
 		/* END MEASURE */
 	
     </script>
