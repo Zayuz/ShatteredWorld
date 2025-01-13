@@ -169,7 +169,7 @@ function layerStyle(feature) {
     var color;
     switch (feature.properties.owner) {
         case 'sample': color = "#ff0000";
-        case 'unclaimed': color = "#0000ff";
+        case 'unclaimed': color = "#eaeaea";
     };
     var default_style = {
         "color": color,
