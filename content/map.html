@@ -85,14 +85,6 @@
 			locationFinder(map);  // Enable positional marker.
 		});
 
-		L.geoJSON(locationsList, {
-    		style: function(feature) {
-        	switch (feature.properties.owner) {
-            	case 'sample': return {color: "#ff0000"};
-            	case 'unclaimed':   return {color: "#0000ff"};
-        	}
-    		}
-		}).addTo(map);
 		/* END MEASURE */
 	
     </script>

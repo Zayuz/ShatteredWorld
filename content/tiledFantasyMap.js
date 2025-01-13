@@ -239,13 +239,29 @@ function pointToLayer(feature, latlng) {
 async function loadGeoJSON(targetfile, map) {
     return new Promise(resolve => {
         var layer = L.ajaxGeoJson(targetfile, {
-            style: layerStyle,
+            //style: layerStyle,
+            style: 
+            function(feature) {
+                switch (feature.properties.owner) {
+                    case 'sample': return {color: "#ff0000"};
+                    case 'unclaimed':   return {color: "#0000ff"};
+                    }
+                },
             onEachFeature: onEachFeature,
             pointToLayer: pointToLayer
         });
 
         console.log("Adding layer to map.");
         layer.addTo(map);
+
+        /*L.geoJSON(locationsList, {
+            style: function(feature) {
+            switch (feature.properties.owner) {
+                case 'sample': return {color: "#ff0000"};
+                case 'unclaimed':   return {color: "#0000ff"};
+                }
+            }
+        }).addTo(map);*/
     });
 }
 
