@@ -166,12 +166,17 @@ function setInitialLocation(map) {
 }
 
 function layerStyle(feature) {
+    var color;
+    switch (feature.properties.owner) {
+        case 'sample': color = "#ff0000";
+        case 'unclaimed': color = "#0000ff";  
+    };
     var default_style = {
-        "color": "#eaeaea",
+        "color": color,
         "weight": ".3",
-        "opacity": "0.0",
+        "opacity": "40.0",
         "fillColor": "#eaeaea",
-        "fillOpacity": "0.0"
+        "fillOpacity": "40.0"
     };
     var rewrite_keys = {
         'stroke': 'color',
@@ -246,6 +251,15 @@ async function loadGeoJSON(targetfile, map) {
 
         console.log("Adding layer to map.");
         layer.addTo(map);
+
+        /*L.ajaxGeoJSON(targetfile, {
+            style: function(targetfile) {
+                switch (targetfile.properties.owner) {
+                    case 'sample': return {color: "#ff0000"};
+                    case 'unclaimed':   return {color: "#0000ff", opacity:"50"};
+                    }
+            }
+        }).addTo(map);*/
     });
 }
 
