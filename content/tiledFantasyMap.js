@@ -175,7 +175,7 @@ function layerStyle(feature) {
         "color": color,
         "weight": ".3",
         "opacity": "0.30",
-        "fillColor": "#00FF00",
+        "fillColor": color,
         "fillOpacity": "0.30"
     };
     var rewrite_keys = {
@@ -243,18 +243,6 @@ function pointToLayer(feature, latlng) {
 
 async function loadGeoJSON(targetfile, map) {
     return new Promise(resolve => {
-        /*var color;
-        switch (feature.properties.owner) {
-            case 'sample': color = "#ff0000";
-            case 'unclaimed': color = "#0000ff";  
-        };
-        var default_style = {
-            "color": color,
-            "weight": ".3",
-            "opacity": "40.0",
-            "fillColor": "#00FF00",
-            "fillOpacity": "40.0"
-        };*/
         var layer = L.ajaxGeoJson(targetfile, {
             style: layerStyle,
             onEachFeature: onEachFeature,
@@ -263,15 +251,6 @@ async function loadGeoJSON(targetfile, map) {
 
         console.log("Adding layer to map.");
         layer.addTo(map);
-
-        /*L.ajaxGeoJSON(targetfile, {
-            style: function(targetfile) {
-                switch (targetfile.properties.owner) {
-                    case 'sample': return {color: "#ff0000"};
-                    case 'unclaimed':   return {color: "#0000ff", opacity:"50"};
-                    }
-            }
-        }).addTo(map);*/
     });
 }
 
