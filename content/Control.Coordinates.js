@@ -14,8 +14,8 @@
 L.Control.Coordinates = L.Control.extend({
   options: {
     position: 'bottomleft',
-    latitudeText: 'lat.',
     longitudeText: 'lon.',
+    latitudeText: 'lat.',
     promptText: 'Press Ctrl+C to copy coordinates',
     precision: 4
   },
@@ -46,7 +46,7 @@ L.Control.Coordinates = L.Control.extend({
       var latCoordinate = lat.textContent.substr(latTextIndex)
       var lngCoordinate = lng.textContent.substr(lngTextIndex)
 
-      window.prompt(this.options.promptText, latCoordinate + ' ' + lngCoordinate)
+      window.prompt(this.options.promptText, lngCoordinate + ', ' + latCoordinate)
     }, this)
 
     return container
