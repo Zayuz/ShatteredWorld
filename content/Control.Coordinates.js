@@ -46,7 +46,7 @@ L.Control.Coordinates = L.Control.extend({
       var latCoordinate = lat.textContent.substr(latTextIndex)
       var lngCoordinate = lng.textContent.substr(lngTextIndex)
 
-      window.prompt(this.options.promptText, lngCoordinate + ', ' + latCoordinate)
+      window.prompt(this.options.promptText, lngCoordinate + ',' + latCoordinate)
     }, this)
 
     return container
