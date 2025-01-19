@@ -58,7 +58,7 @@
 {
   "type":"Feature",
   "properties": {
-    "popup-text": "<a href='https://shatteredworld.org/Kaneros/Region-607'>Region 607: Unnamed</a>",
+    "popup-text": "<a href='https://shatteredworld.org/Kaneros/Region-607' target=blank>Region 607: Unnamed</a>",
     "owner": "unclaimed"
   },
   "geometry": {
