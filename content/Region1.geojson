@@ -5,7 +5,7 @@
     "coordinates": [0, 0]
   },
   "properties": {
-    "popup-text":"<a href='https://shatteredworld.org/'>Anchor Point 0-0 for region pin assignnent reference</a>"
+    "popup-text":"<a href='https://shatteredworld.org/' target=blank>Anchor Point 0-0 for region pin assignnent reference</a>"
   }
 },
 {
@@ -15,7 +15,7 @@
     "coordinates": [-150.0, 200.0]
   },
   "properties": {
-    "popup-text":"<a href='https://shatteredworld.org/Sanmah/Region-802'>Region 802: Unnamed</a>"
+    "popup-text":"<a href='https://shatteredworld.org/Sanmah/Region-802' target=blank>Region 802: Unnamed</a>"
   }
 },
 {
@@ -25,7 +25,7 @@
     "coordinates": [300, -150]
   },
   "properties": {
-    "popup-text":"<a href='https://shatteredworld.org/Llyxmal/Region-204'>Region 204: Unnamed</a>"
+    "popup-text":"<a href='https://shatteredworld.org/Llyxmal/Region-204' target=blank>Region 204: Unnamed</a>"
   }
 },
 {
@@ -35,13 +35,13 @@
     "coordinates": [-600, -200]
   },
   "properties": {
-    "popup-text":"<a href='https://shatteredworld.org/Derlanth/Region-404'>Region 404: Unnamed</a>"
+    "popup-text":"<a href='https://shatteredworld.org/Derlanth/Region-404' target=blank>Region 404: Unnamed</a>"
   }
 },
 {
   "type":"Feature",
   "properties": {
-    "popup-text": "<a href='https://shatteredworld.org/Kaneros/Region-602'>Region 602: Unnamed</a>",
+    "popup-text": "<a href='https://shatteredworld.org/Kaneros/Region-602' target=blank>Region 602: Unnamed</a>",
     "owner": "unclaimed"
   },
   "geometry": {
@@ -73,7 +73,7 @@
 {
   "type":"Feature",
   "properties": {
-    "popup-text": "<a href='https://shatteredworld.org/Kaneros/Region-608'>Region 608: Unnamed</a>",
+    "popup-text": "<a href='https://shatteredworld.org/Kaneros/Region-608' target=blank>Region 608: Unnamed</a>",
     "owner": "unclaimed"
   },
   "geometry": {
@@ -89,7 +89,7 @@
 {
   "type":"Feature",
   "properties": {
-    "popup-text": "<a href='https://shatteredworld.org/Kaneros/Region-610'>Region 610: Unnamed</a>",
+    "popup-text": "<a href='https://shatteredworld.org/Kaneros/Region-610' target=blank>Region 610: Unnamed</a>",
     "owner": "unclaimed"
   },
   "geometry": {
